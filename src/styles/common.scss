@@ -1,0 +1,39 @@
+@font-face {
+  font-family: GilroyLight, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  src: url(./font/Gilroy-UltraLight.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyMedium, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/Gilroy-Medium.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: GilroyBold, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url(./font/Gilroy-Bold.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: WorkSans-Regular, sans-serif;
+  src: url(./font/WorkSans-Regular.woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+body {
+  font-family:  GilroyBold, sans-serif;
+  background-color: #272727;
+}
+.container {
+  max-width: 1920px;
+  max-height: max-content;
+  padding: 0 60px;
+  margin: 0 auto;
+}

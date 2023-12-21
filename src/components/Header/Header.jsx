@@ -27,13 +27,14 @@ export default function Header() {
                 <div className='header-row'>
 
                     <div className='header-logo'>
-                        <div className="logo-wrapper">
-                            <img src={logo} alt="logo" style={{ height: "100px" }} />
-                        </div>
-                        <span className="logo-title">DubaiRealty</span>
+                        <a href="/">
+                            <div className="logo-wrapper">
+                                <img src={logo} alt="logo" style={{ height: "100px" }} />
+                            </div>
+                            <span className="logo-title">DubaiRealty</span>
 
-                        <span className="logo-text">Real Estate</span>
-
+                            <span className="logo-text">Real Estate</span>
+                        </a>
                     </div>
                     <nav class='navigation'>
                         <ul className='navbar'>
@@ -50,8 +51,8 @@ export default function Header() {
                             <li><a href="/">Contact</a></li>
                         </ul>
                     </nav>
-                    <div className='user_contacts'>
-                        <button className='header__button'
+                    <div className='user-contacts'>
+                        <button className='header-button'
                             onClick={() => setModalInfoOpen(true)}
                         >Book a consultation</button>
                         <SimpleModal
@@ -109,6 +110,12 @@ export default function Header() {
                                 </Formik>
                             </div>
                         </SimpleModal>
+                        <div className='header-phone'>
+                            <a href="tel:+380991111111">+3 (099) 111-11-11</a>
+                        </div>
+                    </div>
+                    <div className='mobile-btn'>
+                        <button>burger</button>
                     </div>
                 </div>
             </div>

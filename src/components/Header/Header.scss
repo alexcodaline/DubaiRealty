@@ -10,6 +10,7 @@
   align-items: center;
   position: relative;
   width: 100%;
+  z-index: 99;
 }
 
 // logo
@@ -18,9 +19,17 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  z-index: 99;
+  position: relative;
+  a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
   .logo-wrapper {
     position: absolute;
     height: 50px;
+    z-index: 0;
   }
   .logo-title {
     padding: 15px 0 10px 20px;
@@ -70,7 +79,6 @@
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
-
     &:hover {
       color: #fcd54c;
       animation: underline 1s infinite;
@@ -120,12 +128,60 @@
     }
   }
 }
-.header__button {
-  padding: 13px 14px 13px 14px;
-  background-color: #fcd54c;
-  font-family: WorkSans-Regular, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+.user-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+.header-button {
+  text-align: center;
+  display: inline-block;
+  padding: 14px 13px;
+  background: #fcd54c;
+  border: none;
   cursor: pointer;
-  border: 2px solid #ffa743;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 50px;
+    background: #fc924c;
+    left: -55px;
+    top: -40px;
+    transform: rotate(37deg);
+    transition: all 0.7s;
+    opacity: 0.3;
+  }
+  &:hover:before {
+    left: 95%;
+  }
+}
+.header-phone {
+  padding-left: 50px;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    &:hover {
+      color: #fcd54c;
+      animation: underline 1s infinite;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
 }

@@ -53,7 +53,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: left;
-  width: 50%;
+  width: 80%;
 }
 @keyframes underline {
   0% {
@@ -71,8 +71,7 @@
   flex-direction: row;
   color: #fff;
   list-style: none;
-  gap: 40%;
-  width: 20%;
+  gap: 70px;
   a {
     color: #fff;
     text-decoration: none;
@@ -133,7 +132,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 30%;
 }
 .header-button {
   text-align: center;
@@ -181,7 +179,65 @@
     }
   }
 }
+.mobile-btn {
+  display: none;
+}
 
 @media (max-width: 767px) {
-
+  .mobile-btn {
+    display: block;
+    position: absolute;
+    right: -50px;
+    top: 27px;
+    cursor: pointer;
+    z-index: 99;
+    button {
+      background: none;
+      border: none;
+    }
+  }
+  .navigation {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: left;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    transition: left 1s;
+    .navbar {
+      flex-direction: column;
+      border-bottom: 2px solid #fcd54c;
+      width: 70%;
+      a {
+        font-size: 36px;
+      }
+    }
+    
+  }
+  .active {
+    left: 0;
+    
+  }
+  .user-contacts {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    .header-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-phone {
+      padding: 0;
+    }
+  }
 }

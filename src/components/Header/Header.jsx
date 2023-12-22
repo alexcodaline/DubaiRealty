@@ -27,13 +27,7 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <div className="header-row">
-          <div className="mobile-btn">
-            <button onClick={() => {
-              setNavOpen(!navOpen);
-            }}>
-              {navOpen ? <IconClose size={25} /> : <IconOpen size={25} />}
-            </button>
-          </div>
+
           <div className="header-logo">
             <a href="/">
               <div className="logo-wrapper">
@@ -43,6 +37,13 @@ export default function Header() {
 
               <span className="logo-text">Real Estate</span>
             </a>
+          </div>
+          <div className="mobile-btn">
+            <button onClick={() => {
+              setNavOpen(!navOpen);
+            }}>
+              {navOpen ? <IconClose size={25} /> : <IconOpen size={25} />}
+            </button>
           </div>
           <nav className={navOpen ? ['navigation', 'active'].join(' ') : 'navigation'}>
             <ul className="navbar">

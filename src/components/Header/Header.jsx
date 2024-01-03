@@ -27,7 +27,6 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <div className="header-row">
-
           <div className="header-logo">
             <a href="/">
               <div className="logo-wrapper">

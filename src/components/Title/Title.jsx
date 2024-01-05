@@ -35,7 +35,6 @@ export default function Title() {
                     navigation={true}
                     modules={[EffectFade, Pagination, Navigation,Autoplay]}
                     loop={true}
-                    className="mySwiper"
                 >
                     <SwiperSlide>
                         <div className='first-slide'>

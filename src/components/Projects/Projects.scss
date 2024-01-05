@@ -38,7 +38,7 @@
   position: relative;
   background-position: center;
   background-size: cover;
-  height: 470px;
+  height: 55vh;
   width: 100%;
   margin: 10% 0 10% 0;
   background-image: url(./../../img/sliders/projects-sliders/slider-vilas.webp);
@@ -48,6 +48,7 @@
     left: 5%;
     bottom: 9%;
     font-size: 36px;
+    font-weight: bold;
   }
   @keyframes rotateAnimation {
     0% {
@@ -132,43 +133,28 @@
       }
     }
   }
-  .swiper_tech_container {
+  .swiper-grid-column > .swiper-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-    height: 100vh;
-    border: 1px solid #fff;
-  
-    .slide-vilas,
-    .slide-houses,
-    .slide-comers {
-      grid-column-start: 2;
-      grid-column-end: 4;
-    }
-    .slide-townhouses {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-}
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    margin-bottom: 25px;
+  }
   .vilas,
   .houses,
   .townhouses,
   .comers {
     position: relative;
-    height: 190px;
+    background-position: center;
+    background-size: cover;
+    height: 186px;
     width: 100%;
-    margin: 10% 0 50% 0;
+    margin: 0;
     .slide-name {
-      position: absolute;
-      color: #fff;
-      left: 15%;
-      bottom: 9%;
       font-size: 18px;
-      width: 20%;
+      left: 5%;
+      margin: 0;
+      padding: 0;
     }
-
     .hovered {
       background-color: #fcd54c;
       width: 100%;
@@ -178,23 +164,22 @@
       padding-left: 13%;
       text-align: left;
       height: 100%;
-
+      animation: rotateAnimation 0.5s ease-in-out forwards;
       .desc-name {
         font-size: 18px;
+        font-weight: bold;
       }
-
       p {
-        font-size: 12px;
+        font-size: 10px;
+        width: 90%;
       }
-
       a {
         max-width: max-content;
         border-bottom: 1px solid #fff;
         color: black;
-        font-size: 20px;
+        font-size: 12px;
         font-weight: bold;
-
-        &:hover {
+        &::hover {
           color: chocolate;
         }
       }

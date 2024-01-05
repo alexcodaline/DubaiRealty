@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.scss";
 import logo from "./../../img/icons/header-decoration.svg";
 import { SimpleModal } from "../SimpleModal/SimpleModal";
@@ -23,6 +23,16 @@ const validationSchema = Yup.object().shape({
 export default function Header() {
   const [modalInfoisOpen, setModalInfoOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  useEffect(() => {
+    if (navOpen) {
+      document.body.classList.add('body-no-scroll');
+    } else {
+      document.body.classList.remove('body-no-scroll');
+    }
+    return () => {
+      document.body.classList.remove('body-no-scroll');
+    };
+  }, [navOpen]);
   return (
     <header className="header">
       <div className="container">

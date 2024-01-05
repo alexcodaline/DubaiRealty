@@ -14,6 +14,11 @@ export default function Projects() {
     const [isHoveredSlide3, setIsHoveredSlide3] = useState(false);
     const [isHoveredSlide4, setIsHoveredSlide4] = useState(false);
 
+    const toggleHover1 = () => setIsHoveredSlide1(!isHoveredSlide1);
+    const toggleHover2 = () => setIsHoveredSlide2(!isHoveredSlide2);
+    const toggleHover3 = () => setIsHoveredSlide3(!isHoveredSlide3);
+    const toggleHover4 = () => setIsHoveredSlide4(!isHoveredSlide4);
+
     return (
         <section className='projects'>
             <div className='container'>
@@ -71,6 +76,7 @@ export default function Projects() {
                             <SwiperSlide key={`slide-${index}-1`}
                                 onMouseEnter={() => setIsHoveredSlide1(true)}
                                 onMouseLeave={() => setIsHoveredSlide1(false)}
+                                onClick={toggleHover1}
                             >
                                 <div className={`vilas ${isHoveredSlide1 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide1 && (
@@ -88,7 +94,9 @@ export default function Projects() {
                             {/* slide2 */}
                             <SwiperSlide key={`slide-${index}-2`}
                                 onMouseEnter={() => setIsHoveredSlide2(true)}
-                                onMouseLeave={() => setIsHoveredSlide2(false)}>
+                                onMouseLeave={() => setIsHoveredSlide2(false)}
+                                onClick={toggleHover2}
+                                >
                                 <div className={`houses ${isHoveredSlide2 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide2 && (
                                         <div className='slide-name'>Houses</div>
@@ -105,7 +113,9 @@ export default function Projects() {
                             {/* slide3 */}
                             <SwiperSlide key={`slide-${index}-3`}
                                 onMouseEnter={() => setIsHoveredSlide3(true)}
-                                onMouseLeave={() => setIsHoveredSlide3(false)}>
+                                onMouseLeave={() => setIsHoveredSlide3(false)}
+                                onClick={toggleHover3}
+                                >
                                 <div className={`townhouses ${isHoveredSlide3 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide3 && (
                                         <div className='slide-name'>Townhouses</div>
@@ -122,7 +132,9 @@ export default function Projects() {
                             {/* slide4 */}
                             <SwiperSlide key={`slide-${index}-4`}
                                 onMouseEnter={() => setIsHoveredSlide4(true)}
-                                onMouseLeave={() => setIsHoveredSlide4(false)}>
+                                onMouseLeave={() => setIsHoveredSlide4(false)}
+                                onClick={toggleHover4}
+                            >
                                 <div className={`comers ${isHoveredSlide4 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide4 && (
                                         <div className='slide-name'>Comercial</div>

@@ -112,7 +112,7 @@
         margin: 0;
         background-color: #272727;
         animation: slide-down 0.5s ease;
-       
+
         li {
           font-size: 14px;
           &:hover {
@@ -207,27 +207,31 @@
     }
   }
   .navigation {
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 102%;
-    height: 100vh;
+    height: 100vh !important;
     justify-content: center;
     align-items: left;
-    position: absolute;
+    margin-top: 10%;
     left: -130%;
-    top: 10%;
+    top: 20%;
     transition: left 1s;
     background-color: #272727;
   }
   .navbar {
+    position: relative;
     flex-direction: column;
     border-bottom: 2px solid #fcd54c;
     justify-content: center;
     text-align: left;
+    margin-top: 15%;
     width: 100%;
+    height: 100%;
     background-color: #272727;
     a {
-      font-size: 36px;
+      font-size: 25px;
     }
     .dropdown {
       display: inline-block;
@@ -238,7 +242,7 @@
         display: none;
         font-size: 14px;
       }
-  
+
       &:hover {
         ul {
           position: absolute;
@@ -257,7 +261,7 @@
               background-color: #fcd54c;
             }
             a {
-            font-size: 15px;
+              font-size: 15px;
               &:hover {
                 color: black;
               }
@@ -267,15 +271,19 @@
       }
     }
   }
-  
+
   .active {
-    left: 0;
+    left: -1px;
+  }
+  .body-no-scroll {
+    overflow: hidden;
   }
   .user-contacts {
     padding-top: 5%;
+    padding-bottom: 10%;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
     .header-button {

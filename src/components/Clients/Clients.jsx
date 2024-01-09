@@ -34,7 +34,7 @@ export default function Clients() {
                         pagination={{
                             clickable: true,
                         }}
-                        // autoplay={{ delay: 4000 }}
+                        autoplay={{ delay: 4000 }}
                         navigation={false}
                         modules={[Pagination, Autoplay, EffectCoverflow]}
                         loop={true}

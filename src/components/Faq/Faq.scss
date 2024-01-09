@@ -1,0 +1,111 @@
+.faq-section {
+  margin-top: 80px;
+  width: 100%;
+}
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  gap: 20px;
+  .faq-title {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    width: 60%;
+    color: #fff;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+  }
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 20px;
+  width: 60%;
+}
+.faq-item-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    border-bottom: 1px solid #fcd54c;
+    padding: 2%;
+    cursor: pointer;
+  }
+  .faq-answer {
+    width: 100%;
+    padding: 2% 5% 2% 5%;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  .active {
+    transform: translateX(0%) rotate(90deg);
+  }
+}
+.faq-collapse {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+@media (max-width: 767px) {
+  .faq-container {
+    .faq-title {
+      width: 100%;
+      color: #fff;
+      font-size: 35px;
+      line-height: normal;
+    }
+  }
+  .faq-list {
+    width: 100%;
+  }
+  .faq-item-container {
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      border-bottom: 1px solid #fcd54c;
+      padding: 2%;
+      cursor: pointer;
+      position: relative;
+    }
+    .faq-answer {
+      width: 100%;
+      padding: 2% 5% 5% 5%;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      animation: fadeIn 0.3s ease-in-out forwards;
+    }
+    .faq-button {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        padding-left: 20px;
+    }
+    .active {
+      transform: translateX(0%) rotate(90deg);
+    }
+  }
+}

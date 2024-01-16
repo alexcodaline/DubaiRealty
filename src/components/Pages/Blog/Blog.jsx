@@ -58,7 +58,7 @@ export default function Blog() {
                 '--swiper-navigation-color': '#fcd54c',
                 '--swiper-pagination-color': '#fcd54c',
                 '--swiper-pagination-progressbar-size': '40px',
-                '--swiper-pagination-bottom': '0',
+                '--swiper-pagination-bottom': '0px',
                 '--swiper-pagination-bullet-size': '20px',
                 '--swiper-pagination-bullet-width': '20px',
                 '--swiper-pagination-bullet-inactive-color': '#fff',
@@ -75,8 +75,8 @@ export default function Blog() {
                   slidesPerView: 1,
                   spaceBetween: 5,
                   grid: {
-                    rows: 2,
-                },
+                    fill: 'column',
+                  },
                 },
                 769: {
                   slidesPerView: 3,
@@ -85,7 +85,7 @@ export default function Blog() {
               className="SwiperBlog"
             >
               {filteredSlides.map(slide => (
-                <SwiperSlide key={slide.id}>
+                <SwiperSlide key={slide.id} >
                   <div className='blog-item'>
                     <img src={slide.image} alt={slide.title} />
                     <h4>{slide.title}</h4>

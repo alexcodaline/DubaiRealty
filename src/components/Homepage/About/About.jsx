@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.scss'
-import placeholder1 from './../../img/decoration/placeholder1.webp'
-import placeholder2 from './../../img/decoration/placeholder2.webp'
+import placeholder1 from '../../../img/decoration/placeholder1.webp'
+import placeholder2 from '../../../img/decoration/placeholder2.webp'
 import ContactUs from '../ContactUs/ContactUs.jsx'
 
 export default function About() {

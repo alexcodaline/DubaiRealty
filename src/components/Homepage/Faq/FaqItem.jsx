@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ReactComponent as ArrowIcon } from "./../../img/decoration/faq-arrow.svg";
+import { ReactComponent as ArrowIcon } from "../../../img/decoration/faq-arrow.svg";
 
 const FaqItem = ({ question, answer, index, openIndex, setOpenIndex }) => {
     const isOpen = index === openIndex;

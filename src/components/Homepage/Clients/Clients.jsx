@@ -7,8 +7,8 @@ import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay'
 import 'swiper/scss/effect-coverflow';
 import 'swiper/scss/scrollbar';
-import client1 from "./../../img/clients/client1.webp"
-import client2 from "./../../img/clients/client2.webp"
+import client1 from "../../../img/clients/client1.webp"
+import client2 from "../../../img/clients/client2.webp"
 
 
 export default function Clients() {

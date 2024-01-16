@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import logo from "./../../img/icons/header-decoration.svg";
-import { SimpleModal } from "../SimpleModal/SimpleModal";
+import { SimpleModal } from "../Homepage/SimpleModal/SimpleModal";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ReactComponent as IconClose } from './../../img/icons/icon-close.svg'
 import { ReactComponent as IconOpen } from './../../img/icons/open-icon.svg';
@@ -71,13 +72,13 @@ export default function Header() {
                 </ul>
               </li>
               <li>
-                <a href="/">Blog</a>
+              <Link to="/blog">Blog</Link>
               </li>
               <li>
                 <a href="/">About</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+              <Link to="/contact">Contact</Link>
               </li>
             </ul>
             <div className="user-contacts">

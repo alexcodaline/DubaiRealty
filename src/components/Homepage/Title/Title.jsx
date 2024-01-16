@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Title.scss"
-import titleDecoration from "./../../img/icons/title-decoration.svg";
+import titleDecoration from "../../../img/icons/title-decoration.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/scss';

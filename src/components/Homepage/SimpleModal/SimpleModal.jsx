@@ -1,6 +1,6 @@
 import React from 'react';
 import { Transition } from 'react-transition-group';
-import { ReactComponent as IconClose } from './../../img/icons/icon-close.svg'
+import { ReactComponent as IconClose } from '../../../img/icons/icon-close.svg'
 import './SimpleModal.scss';
 
 export const SimpleModal = ({ isOpen, onClose, children }) => {

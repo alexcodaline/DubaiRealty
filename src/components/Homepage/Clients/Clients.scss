@@ -11,7 +11,7 @@
   padding: 0 0 10px 20px;
   gap: 10px;
   width: 100%;
-  height: 310px;
+  height: 100%;
   padding-bottom: 25px;
   background-color: #272727;
   .client-photo {
@@ -48,13 +48,14 @@
       color: #929292;
       font-size: 16px;
       font-weight: 400;
-      line-height: 26px;
+      line-height: 20px;
     }
   }
 }
 
 @media (max-width: 767px) {
   .swiper-slide-client {
+    height: 80%;
     .client-info {
       .client-photo {
         border-radius: 50%;

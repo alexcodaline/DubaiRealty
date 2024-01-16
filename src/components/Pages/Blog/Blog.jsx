@@ -58,7 +58,7 @@ export default function Blog() {
                 '--swiper-navigation-color': '#fcd54c',
                 '--swiper-pagination-color': '#fcd54c',
                 '--swiper-pagination-progressbar-size': '40px',
-                '--swiper-pagination-bottom': '0px',
+                '--swiper-pagination-bottom': '5px',
                 '--swiper-pagination-bullet-size': '20px',
                 '--swiper-pagination-bullet-width': '20px',
                 '--swiper-pagination-bullet-inactive-color': '#fff',
@@ -66,7 +66,7 @@ export default function Blog() {
               slidesPerView={3}
               pagination={pagination}
               modules={[Pagination, Grid]}
-              spaceBetween={30}
+              spaceBetween={20}
               grid={{
                 rows: 2,
               }}

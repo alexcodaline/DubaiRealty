@@ -1,12 +1,11 @@
 import React from 'react'
 import './Clients.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectCoverflow, Scrollbar } from 'swiper/modules';
+import { Pagination, Autoplay, EffectCoverflow} from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay'
 import 'swiper/scss/effect-coverflow';
-import 'swiper/scss/scrollbar';
 import client1 from "../../../img/clients/client1.webp"
 import client2 from "../../../img/clients/client2.webp"
 
@@ -69,7 +68,7 @@ export default function Clients() {
                                     <div className='client-block-desc'>
                                         <span className='client-name'>Paul</span>
                                         <span className='client-about'>Owner in <span>Paul.com</span></span>
-                                        <p className='client-desc'>Projects for many large domestic and foreign corporations, enterprises in many fields such as finance, banking, F&B, education, communication.</p>
+                                        <p className='client-desc'>Projects for many large domestic and foreign corporations, enterprises in many fields such as finance, banking, F&B, education.</p>
                                     </div>
                                 </div>
                             </SwiperSlide>

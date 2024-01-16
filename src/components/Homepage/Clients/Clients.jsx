@@ -19,7 +19,7 @@ export default function Clients() {
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
-                    scrollbar={true}
+                    scrollbar={false}
                     slidesPerView={1}
                     centeredSlides={false}
                     slidesPerGroupSkip={2}
@@ -35,6 +35,7 @@ export default function Clients() {
                     style={{
                         '--swiper-navigation-color': '#fcd54c',
                         '--swiper-pagination-color': '#fcd54c',
+                        '--swiper-pagination-bottom': '-3px',
                     }}
                     speed={750}
                     pagination={{ 
@@ -42,7 +43,7 @@ export default function Clients() {
                     }}
                     autoplay={{ delay: 4000 }}
                     navigation={false}
-                    modules={[Pagination, Autoplay, EffectCoverflow, Scrollbar]}
+                    modules={[Pagination, Autoplay, EffectCoverflow]}
                     loop={true}
                     className='swiper-clients'
                     breakpoints={{

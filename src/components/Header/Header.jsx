@@ -34,6 +34,9 @@ export default function Header() {
       document.body.classList.remove('body-no-scroll');
     };
   }, [navOpen]);
+  const closeNav = () => {
+    setNavOpen(false);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -71,13 +74,13 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li onClick={closeNav}>
               <Link to="/blog">Blog</Link>
               </li>
               <li>
                 <a href="/">About</a>
               </li>
-              <li>
+              <li onClick={closeNav}>
               <Link to="/contact">Contact</Link>
               </li>
             </ul>

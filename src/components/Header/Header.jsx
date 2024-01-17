@@ -23,7 +23,9 @@ const validationSchema = Yup.object().shape({
 
 export default function Header() {
   const [modalInfoisOpen, setModalInfoOpen] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+
   useEffect(() => {
     if (navOpen) {
       document.body.classList.add('body-no-scroll');
@@ -60,28 +62,34 @@ export default function Header() {
           </div>
           <nav className={navOpen ? ['navigation', 'active'].join(' ') : 'navigation'}>
             <ul className="navbar">
-              <li className="dropdown">
-                <a href="/">Buy</a>
-                <ul>
-                  <li>
-                    <a href="/">Category number one</a>
-                  </li>
-                  <li>
-                    <a href="/">Apartments in Dubai</a>
-                  </li>
-                  <li>
-                    <a href="/">Category number twenty five</a>
-                  </li>
-                </ul>
+              <li
+                onMouseEnter={() => setMenuVisible(true)}
+                onMouseLeave={() => setMenuVisible(false)}
+                className={`menu ${menuVisible ? "active-menu" : ""}`}
+                onClick={() => setMenuVisible(!menuVisible)}>
+                <span>Buy</span>
+                {menuVisible ?
+                  <ul>
+                    <li onClick={closeNav}>
+                      <Link to="/category">Category number twenty five</Link>
+                    </li>
+                    <li onClick={closeNav}>
+                      <a href="/">Apartments in Dubai</a>
+                    </li>
+                    <li onClick={closeNav}>
+                      <a href="/">Category number one</a>
+                    </li>
+                  </ul>
+                  : null}
               </li>
               <li onClick={closeNav}>
-              <Link to="/blog">Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
                 <a href="/">About</a>
               </li>
               <li onClick={closeNav}>
-              <Link to="/contact">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
             <div className="user-contacts">

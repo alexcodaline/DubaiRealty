@@ -5,6 +5,7 @@ import CategoryPage from "./components/Pages/Category/Catergory";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Homepage from "./components/Homepage/Homepage";
+import ApartmentsPage from "./components/Pages/Apartments/Apartments";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/blog" element={<BlogPage />} />
         <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="/category" element={<CategoryPage />} />
+        <Route exact path="/apartments" element={<ApartmentsPage/>}/>
       </Routes>
       <Footer />
     </Router>

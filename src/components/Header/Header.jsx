@@ -74,7 +74,7 @@ export default function Header() {
                       <Link to="/category">Category number twenty five</Link>
                     </li>
                     <li onClick={closeNav}>
-                      <a href="/">Apartments in Dubai</a>
+                    <Link to="/apartments">Apartments in Dubai</Link>
                     </li>
                     <li onClick={closeNav}>
                       <a href="/">Category number one</a>

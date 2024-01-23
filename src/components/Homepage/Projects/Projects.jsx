@@ -43,6 +43,7 @@ export default function Projects() {
                     style={{
                         '--swiper-navigation-color': '#fcd54c',
                         '--swiper-pagination-color': '#fcd54c',
+                        '--swiper-pagination-bottom': '5px',
                     }}
                     speed={750}
                     slidesPerView={4}
@@ -69,6 +70,7 @@ export default function Projects() {
                         },
                     }
                     }
+                    className='project-swiper'
                 >
                     {[...Array(2)].map((_, index) => (
                         <React.Fragment key={`slide-${index}`}>

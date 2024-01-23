@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   .articles-name {
+    font-family: 'Gilroy-Bold';
     color: #fff;
     font-size: 70px;
     font-weight: 700;
@@ -117,5 +118,24 @@
     flex-direction: column;
     width: 100%;
     gap: 20px;
+  }
+}
+@media (min-width:768px) and (max-width:1200px) {
+
+  .articles-title {
+    width: 100%;
+    .articles-name {
+      font-size: 30px;
+    }
+    a {   
+      font-size: 12px;
+    }
+  }
+  .articles-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5%;
   }
 }

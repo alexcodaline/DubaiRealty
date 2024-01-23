@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Title.scss"
 import titleDecoration from "../../../img/icons/title-decoration.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { EffectFade, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay'
@@ -27,13 +27,11 @@ export default function Title() {
                     }}
                     speed={750}
                     slidesPerView={1}
-                    pagination={{
-                        clickable: true,
-                    }}
+                   
                     autoplay={{ delay: 2500 }}
                     effect={'fade'}
                     navigation={true}
-                    modules={[EffectFade, Pagination, Navigation,Autoplay]}
+                    modules={[EffectFade, Navigation,Autoplay]}
                     loop={true}
                 >
                     <SwiperSlide>

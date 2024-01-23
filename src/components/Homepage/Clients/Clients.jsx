@@ -34,7 +34,7 @@ export default function Clients() {
                     style={{
                         '--swiper-navigation-color': '#fcd54c',
                         '--swiper-pagination-color': '#fcd54c',
-                        '--swiper-pagination-bottom': '-3px',
+                        '--swiper-pagination-bottom': '-4px',
                     }}
                     speed={750}
                     pagination={{ 
@@ -51,8 +51,12 @@ export default function Clients() {
                             spaceBetween: 5,
                         },
                         769: {
+                            slidesPerView: 3,
+                            spaceBetween: 0,
+                        },
+                        1201: {
                             slidesPerView: 4,
-                            slidesPerGroup: 2,
+                            spaceBetween: 5,
                         }
                     }}
                 >

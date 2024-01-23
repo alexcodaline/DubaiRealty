@@ -31,6 +31,7 @@
     font-size: 70px;
     font-weight: 700;
     line-height: 69px;
+    font-family: 'Gilroy-Bold';
   }
   .apartment-decs {
     font-size: 18px;
@@ -68,6 +69,7 @@
   align-items: center;
 }
 .placeholder-quotes {
+  font-family: 'Gilroy-Regular';
   display: flex;
   justify-content: center;
   border: 3px solid #fcd54c;
@@ -75,7 +77,6 @@
   .quotes {
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
     line-height: 160%;
     padding: 5%;
     span {
@@ -158,3 +159,81 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  
+  .about-apartment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    .apartment-experence {
+      text-decoration: none;
+      color: #fcd54c;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height:normal;
+      &::hover {
+        color: #fff;
+      }
+    }
+    .apartment-title {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .apartment-decs {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+    margin-bottom: 40px;
+  }
+  
+  // Video
+  .about-video {
+    .video {
+      .frame-video {
+        height: 394px;
+        width: 100%;
+      }
+    }
+  }
+  // Video
+  .placeholder-quotes {
+    width: 90%;
+    .quotes {
+      font-size: 18px;
+    }
+  }
+  .placeholder-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 5%;
+    height: 100%;
+    .placeholder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 30px;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 190px;
+      }
+      span {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+  }
+ }

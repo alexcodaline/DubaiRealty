@@ -93,7 +93,7 @@
     }
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1200px) {
   .footer {
     position: static;
     .copyright {

@@ -64,7 +64,7 @@
   transition: height 0.3s;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1200px) {
   .faq-container {
     .faq-title {
       width: 100%;
@@ -99,10 +99,10 @@
       animation: fadeIn 0.3s ease-in-out forwards;
     }
     .faq-button {
-        position: absolute;
-        right: 0;
-        bottom: 15px;
-        padding-left: 20px;
+      position: absolute;
+      right: 0;
+      bottom: 15px;
+      padding-left: 20px;
     }
     .active {
       transform: translateX(0%) rotate(90deg);

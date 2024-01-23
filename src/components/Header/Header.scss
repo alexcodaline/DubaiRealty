@@ -33,14 +33,14 @@
   }
   .logo-title {
     padding: 15px 0 10px 20px;
-    font-family: GilroyBold, sans-serif;
+    font-family: 'Gilroy-Bold';
     font-size: 28px;
     color: #fff;
   }
 
   .logo-text {
     padding-left: 20px;
-    font-family: WorkSans-Regular, sans-serif;
+    font-family: 'Gilroy-Bold';
     font-size: 18px;
     color: grey;
   }
@@ -86,17 +86,6 @@
       animation: underline 1s infinite;
     }
   }
-  // @keyframes slide-down {
-  //   from {
-  //     opacity: 0;
-  //     transform: translateY(-20px);
-  //     padding-top: 50px;
-  //   }
-  //   to {
-  //     opacity: 1;
-  //     transform: translateY(0);
-  //   }
-  // }
 }
 
 .menu {
@@ -200,6 +189,109 @@
 }
 
 @media (max-width: 767px) {
+  .header-row,
+  .header-logo {
+    position: relative;
+  }
+  .mobile-btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    cursor: pointer;
+    z-index: 99;
+    button {
+      background: none;
+      border: none;
+    }
+  }
+  .navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 102%;
+    height: 100vh !important;
+    justify-content: center;
+    align-items: left;
+    margin-top: 10%;
+    left: -130%;
+    top: 0%;
+    transition: left 1s;
+    background-color: #272727;
+    gap: 0;
+  }
+  .navbar {
+    position: relative;
+    flex-direction: column;
+    border-bottom: 2px solid #fcd54c;
+    justify-content: center;
+    text-align: left;
+    margin-top: 15%;
+    width: 100%;
+    height: 50%;
+    gap: 20%;
+    background-color: #272727;
+    a,span {
+      font-size: 25px;
+    }
+  }
+
+  .active {
+    left: -1px;
+  }
+  .body-no-scroll {
+    overflow: hidden;
+  }
+
+  .menu {
+    &.active-menu {
+      ul {
+        display: block;
+        opacity: 1;
+        width: 250px;
+        height: 200px;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #fcd54c;
+      padding: 10px;
+      display: block;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #fcd54c;
+        color: #272727;
+      }
+    }
+  }
+
+  .user-contacts {
+    padding-top: 5%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    .header-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-phone {
+      padding: 0 0 50px 0;
+    }
+  }
+}
+// tablet 
+@media (min-width: 768px) and (max-width:1200px) {
   .header-row,
   .header-logo {
     position: relative;

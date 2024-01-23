@@ -46,7 +46,7 @@
     position: absolute;
     color: #fff;
     left: 5%;
-    bottom: 9%;
+    // bottom: 50px;
     font-size: 36px;
     font-weight: bold;
   }
@@ -154,7 +154,93 @@
       font-size: 18px;
       left: 5%;
       margin: 0;
+      top: 80%;
       padding: 0;
+    }
+    .hovered {
+      background-color: #fcd54c;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 13%;
+      text-align: left;
+      height: 100%;
+      animation: rotateAnimation 0.5s ease-in-out forwards;
+      .desc-name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 10px;
+        width: 90%;
+      }
+      a {
+        max-width: max-content;
+        border-bottom: 1px solid #fff;
+        color: black;
+        font-size: 12px;
+        font-weight: bold;
+        &::hover {
+          color: chocolate;
+        }
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1200px) {
+  .projects-links {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    margin: 5px;
+    gap: 20%;
+    width: 100%;
+  }
+  .projects-latest {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .projects-links-items {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 50%;
+    .projects-links-item {
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        &::hover {
+          color: #fcd54c;
+        }
+      }
+    }
+  }
+  .project-swiper {
+    height: 250px;
+  }
+  .vilas,
+  .houses,
+  .townhouses,
+  .comers {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 220px;
+    width: 100%;
+    margin: 0;
+    .slide-name {
+      position: absolute;
+      color: #fff;
+      left: 5%;
+      top: 150px;
+      font-size: 18px;
+      font-weight: bold;
     }
     .hovered {
       background-color: #fcd54c;

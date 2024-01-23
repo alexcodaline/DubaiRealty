@@ -48,7 +48,7 @@
   position: relative;
   span {
     font-size: 16px;
-    font-family: WorkSans-Regular, sans-serif;
+    font-family: "SpaceGroteskBold";
   }
   p {
     font-size: 96px;
@@ -166,6 +166,119 @@
     .description-text {
       font-size: 16px;
       padding: 0;
+    }
+  }
+
+  .description.active {
+    color: #fcd54c;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .title {
+    margin-top: 70px;
+    width: 100%;
+  }
+  .container {
+    position: relative;
+  }
+
+  .first-slide,
+  .second-slide,
+  .third-slide {
+    background: url(../../../img/sliders/title-sliders/slider1.webp);
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .second-slide {
+    background: url(../../../img/sliders/title-sliders/slider2.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  .third-slide {
+    background: url(../../../img/sliders/title-sliders/slider3.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  .slide-wrapper {
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 100px;
+    z-index: 0;
+    img {
+      z-index: 0;
+      height: 250px;
+    }
+  }
+  .slide-name {
+    padding-top: 30px;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #fff;
+    z-index: 99;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    span {
+      font-size: 16px;
+      font-family: "SpaceGroteskBold";
+    }
+    p {
+      font-size: 50px;
+      width: 70%;
+      margin: 0;
+      padding: 22px 0 22px 0;
+      span {
+        font-size: 30px;
+        color: #fcd54c;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      z-index: 99;
+      &:hover {
+        color: #fcd54c;
+      }
+    }
+  }
+
+  .description-blocks {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    position: absolute;
+    right: 35px;
+    bottom: 0px;
+    background-color: #272727;
+    height: 70px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .description {
+    transition: background-color 0.3s ease;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    width: 50%;
+    .description-numb {
+      font-size: 30px;
+      padding-left: 30px;
+    }
+    .description-text {
+      font-size: 12px;
+      padding-left: 15px;
     }
   }
 

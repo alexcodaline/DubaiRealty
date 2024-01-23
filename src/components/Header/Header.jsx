@@ -82,13 +82,13 @@ export default function Header() {
                   </ul>
                   : null}
               </li>
-              <li onClick={closeNav}>
+              <li onClick={closeNav} className={`nav-link ${menuVisible ? "nav-link-shifted" : ""}`}>
                 <Link to="/blog">Blog</Link>
               </li>
-              <li>
+              <li onClick={closeNav} className={`nav-link2 ${menuVisible ? "nav-link-shifted-2" : ""}`}>
                 <a href="/">About</a>
               </li>
-              <li onClick={closeNav}>
+              <li onClick={closeNav} className={`nav-link3 ${menuVisible ? "nav-link-shifted-3" : ""}`}>
                 <Link to="/contact">Contact</Link>
               </li>
             </ul>

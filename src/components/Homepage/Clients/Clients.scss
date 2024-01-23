@@ -3,7 +3,9 @@
   width: 100%;
 }
 .swiper-clients {
-  height: 38vh;
+  height: 311px;
+  position: relative;
+  padding-top: 50px;
 }
 
 .swiper-slide-client {
@@ -11,17 +13,20 @@
   flex-direction: column;
   border: 2px solid #fcd54c;
   color: #fff;
-  padding: 0 0 10px 20px;
-  gap: 10px;
+  padding: 0px 0 25px 20px;
   width: 100%;
   height: 100%;
-  padding-bottom: 25px;
   background-color: #272727;
+  justify-content: space-around;
+
   .client-photo {
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
+    height: 112px;
+    width: 112px;
     padding-top: 10px;
+    position: absolute;
+    top: -65px;
+    z-index: 99;
   }
   .client-photo-decortion {
     color: #fcd54c;
@@ -57,12 +62,18 @@
 }
 
 @media (max-width: 767px) {
+  .swiper-clients {
+    width: 100%;
+    padding-bottom: 20px;
+  }
   .swiper-slide-client {
-    height: 80%;
-    height: 96%;
+    height: 100%;
     .client-info {
       .client-photo {
         border-radius: 50%;
+        top: -50px;
+        width: 100px;
+        height: 100px;
       }
       .client-photo-decortion {
         font-size: 100px;
@@ -70,6 +81,7 @@
     }
   }
   .client-block-desc {
+    padding-top: 70px;
     .client-name {
       font-size: 25px;
       font-weight: 700;
@@ -89,16 +101,18 @@
 @media (min-width: 768px) and (max-width: 1200px) {
   .swiper-clients {
     width: 100%;
+    padding-bottom: 20px;
   }
   .swiper-slide-client {
     padding: 0 0 25px 20px;
     gap: 0;
     width: 100%;
-    height: 96%;
+    height: 100%;
     overflow: hidden;
     .client-photo {  
       height: 100px;
       width: 100px;
+      top: -50px;
     }
     .client-block-desc {
       display: flex;

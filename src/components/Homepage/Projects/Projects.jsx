@@ -36,6 +36,9 @@ export default function Projects() {
                         <div className='projects-links-item'>
                             <a href="/">Interior</a>
                         </div>
+                        <div className='projects-links-item'>
+                            <a href="/">All projects</a>
+                        </div>
                     </div>
                 </div>
                 <Swiper

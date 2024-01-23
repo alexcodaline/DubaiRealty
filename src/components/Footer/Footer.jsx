@@ -70,7 +70,7 @@ export default function Footer() {
                         </div>
                         <div className='footer-links'>
                             <div className='footer-links-name'>Contact</div>
-                            <div className={`links ${openSection !== 'section5' ? 'open' : ''}`}>
+                            <div className={`links ${openSection === 'section5' ? 'open' : ''}`}>
                                 <a href="/">964 Worthington Drive
                                     Dubai, UAE </a>
                                 <a href="mailto:dubairealty@mail.com">dubairealty@mail.com</a>

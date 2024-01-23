@@ -18,7 +18,8 @@
 }
 .projects-links-items {
   display: flex;
-  gap: 30%;
+  width: 30%;
+  justify-content: space-between;
   .projects-links-item {
     a {
       text-decoration: none;
@@ -26,6 +27,17 @@
       font-size: 16px;
       &:hover {
         color: #fcd54c;
+      }
+    }
+    &:last-child {
+      a {
+        font-size: 16px;
+        font-style: italic;
+        line-height: normal;
+        color: #929292;
+        &:hover {
+          color: #fcd54c;
+        }
       }
     }
   }
@@ -121,7 +133,7 @@
   }
   .projects-links-items {
     display: flex;
-    gap: 30%;
+    width: 100%;
     padding-bottom: 15px;
     .projects-links-item {
       a {
@@ -194,10 +206,10 @@
   .projects-links {
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: space-between;
     margin: 5px;
-    gap: 20%;
+    gap: 0;
     width: 100%;
   }
   .projects-latest {
@@ -207,9 +219,10 @@
   }
   .projects-links-items {
     display: flex;
-    justify-content: left;
-    align-items: left;
-    gap: 50%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 50%;
     .projects-links-item {
       a {
         text-decoration: none;

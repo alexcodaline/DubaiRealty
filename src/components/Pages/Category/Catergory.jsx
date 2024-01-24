@@ -74,7 +74,7 @@ export default function Category() {
 
                   },
                   769: {
-                    slidesPerView: 2,
+                    slidesPerView: 4,
                   },
                   1080: {
                     slidesPerView: 4,

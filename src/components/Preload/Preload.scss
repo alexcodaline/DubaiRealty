@@ -1,0 +1,93 @@
+.preload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes animateLogo {
+    from {
+      transform: translateY(-300%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    75% {
+      opacity: 0.6;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes animateDesc {
+    from {
+      transform: translateY(300%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    75% {
+      opacity: 0.6;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+.preload-logo {
+  text-align: left;
+  color: white;
+  position: relative;
+  .preload-img {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    path {
+      animation: draw 0.5s linear forwards;  
+      stroke-dashoffset: 1000;
+      stroke-dasharray:  1000;
+      animation-delay: 0.78s;
+    }
+  }
+  .preload-name {
+    font-size: 80px;
+    margin: 0;
+    animation: animateLogo 1s ease-in-out;
+  }
+  .preload-desc {
+    font-size: 25px;
+    animation: animateDesc 1s ease-in-out;
+    color: #929292;
+  }
+}
+@media (min-width:290px) and (max-width:1200px) {
+      .preload-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-between;
+        .preload-name {
+          font-size: 50px;
+          line-height: 160%;
+          animation: animateLogo 1s ease-in-out;
+        }
+        .preload-desc {
+          font-size: 25px;
+          animation: animateDesc 1s ease-in-out;
+          color: #929292;
+          line-height: 200%;
+        }
+      }  
+}

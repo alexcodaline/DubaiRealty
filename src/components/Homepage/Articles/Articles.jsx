@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Articles.scss';
 
 export default function Articles() {
     const [isHoveredBlock1, setIsHoveredBlock1] = useState(false);
     const [isHoveredBlock2, setIsHoveredBlock2] = useState(false);
     const [isHoveredBlock3, setIsHoveredBlock3] = useState(false);
+    const { t } = useTranslation();
 
     return (
         <section className='articles'>
             <div className='container'>
                 <div className="container-articles">
                     <div className='articles-title'>
-                        <span className='articles-name'>Useful articles</span>
-                        <a href="/"> View all articles </a>
+                        <span className='articles-name'>{t('articles-title')}</span>
+                        <a href="/">{t('article-link')}</a>
                     </div>
                     <div className='articles-items'>
 
@@ -23,13 +25,13 @@ export default function Articles() {
                             }}
                             onMouseLeave={() => setIsHoveredBlock1(false)}
                         >
-                            {!isHoveredBlock1 && <span className='article-item-name'>Discover Architecture</span> }
+                            {!isHoveredBlock1 && <span className='article-item-name'>{t('articles-desc')}</span> }
                             {isHoveredBlock1 && (
                                 <div className='hover-item'>
                                     <div className='hover-item-desc'>
-                                        <span className='hover-name'>Discover Architecture</span>
-                                        <p>Projects for many large domestic and foreign corporations, enterprises in many elds such</p>
-                                        <a href="/">Learn more</a>
+                                        <span className='hover-name'>{t('articles-desc')}</span>
+                                        <p>{t('articles-desc-hover')}</p>
+                                        <a href="/">{t('article-link')}</a>
                                     </div>
                                 </div>
                             )}
@@ -42,13 +44,13 @@ export default function Articles() {
                             }}
                             onMouseLeave={() => setIsHoveredBlock2(false)}
                         >
-                            {!isHoveredBlock2 && <span className='article-item-name'>Discover Architecture</span>}
+                            {!isHoveredBlock2 && <span className='article-item-name'>{t('articles-desc')}</span>}
                             {isHoveredBlock2 && (
                                 <div className='hover-item'>
                                     <div className='hover-item-desc'>
-                                        <span className='hover-name'>Discover Architecture</span>
-                                        <p>Projects for many large domestic and foreign corporations, enterprises in many elds such</p>
-                                        <a href="/">Learn more</a>
+                                        <span className='hover-name'>{t('articles-desc')}</span>
+                                        <p>{t('articles-desc-hover')}</p>
+                                        <a href="/">{t('article-link')}</a>
                                     </div>
                                 </div>
                             )}
@@ -60,13 +62,13 @@ export default function Articles() {
                             }}
                             onMouseLeave={() => setIsHoveredBlock3(false)}
                         >
-                            {!isHoveredBlock3 && <span className='article-item-name'>Discover Architecture</span>}
+                            {!isHoveredBlock3 && <span className='article-item-name'>{t('articles-desc')}</span>}
                             {isHoveredBlock3 && (
                                 <div className='hover-item'>
                                     <div className='hover-item-desc'>
-                                        <span className='hover-name'>Discover Architecture</span>
-                                        <p>Projects for many large domestic and foreign corporations, enterprises in many elds such</p>
-                                        <a href="/">Learn more</a>
+                                        <span className='hover-name'>{t('articles-desc')}</span>
+                                        <p>{t('articles-desc-hover')}</p>
+                                        <a href="/">{t('article-link')}</a>
                                     </div>
                                 </div>
                             )}

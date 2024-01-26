@@ -1,0 +1,79 @@
+{
+  "navbar-menu-buy": "BUY",
+  "navbar-menu-buy-category-all": "Category number twenty five",
+  "navbar-menu-buy-category-one": "Category number one",
+  "navbar-menu-buy-apartments": "APARTMENTS IN DUBAI",
+  "navbar-menu-blog": "BLOG",
+  "navbar-menu-about": "ABOUT",
+  "navbar-menu-contacts": "CONTACTS",
+  "navbar-menu-consultation": "Book a consultation",
+  "form-title": "Leave your contacts",
+  "modal-description": "we will contact you within three hours",
+  "form-placeholder-name": "Name",
+  "form-placeholder-phone": "Phone",
+  "form-placeholder-button": "SEND",
+  "slide1-title-name": "Welcome Home",
+  "slide1-title-name2": "To",
+  "slide1-title-name3": "Luxury",
+  "slide2-title-name": "Discover ",
+  "slide2-title-name2": "Nighttime ",
+  "slide2-title-name3": "Dubai ",
+  "slide3-title-name": "Dubai ",
+  "slide3-title-name2": "at ",
+  "slide3-title-name3": "Twilight ",
+  "slide-title-desc1": "Experience the Exceptional",
+  "slide-desc1": "Home Luxury",
+  "slide-desc2": "Nighttime Dubai",
+  "slide-desc3": "Dubai at Twilight",
+  "projects-title": "Latest projects",
+  "projects-last": "All",
+  "projects-all": "All projects",
+  "projects-build": "Building",
+  "projects-interior": "Interior",
+  "project-vilas": "Vilas",
+  "project-houses": "Houses",
+  "project-town": "Townhouses",
+  "project-comers": "Comercial",
+  "project-link": "See project",
+  "about-exp": "Our expertise",
+  "about-title": "The best apartment in Dubai we will find your dream",
+  "about-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nibh massa, euismod ut libero id, blandit posuere augue. Morbi porta volutpat diam egestas ultrices. Phasellus tempus fringilla neque, nec viverra orci tristique vel. In efficitur vehicula magna, varius pellentesque nisl vehicula vel. Aenean vel sem ac elit commodo finibus in nec massa. Nulla facilisi. Nulla vestibulum venenatis sollicitudin. Etiam auctor mollis justo eu tincidunt. Aliquam varius varius tortor. Cras id venenatis sem. Quisque ut risus ex. Sed et tempor massa. Praesent ac eros hendrerit, congue justo ac, molestie urna. Fusce nec neque vitae dolor dapibus elementum. Maecenas nec orci quis sem condimentum dapibus varius a lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "about-quotes": "Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.",
+  "about-athor": "— Mary Kay Ash",
+  "about-placeholder1": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci.",
+  "about-placeholder2": "Vivamus non diam vel lorem efficitur mattis in gravida ante. Ut ullamcorper dapibus ante, eu tincidunt orci feugiat vel. Curabitur eget lectus lectus. Pellentesque malesuada, felis at accumsan interdum, nisl mi fermentum est, eu suscipit dui lorem a dui. Aliquam rhoncus risus in leo vestibulum efficitur. Suspendisse tortor quam, faucibus a lacinia a, bibendum vitae quam. Suspen disse et metus et orci rutrum dictum eu eu nibh. Suspendisse blandit in diam in rhoncus. Nam volutpat hendrerit enim, sed aliquet quam gravida at. Nullam dictum sagittis nisi, eu porta sem mollis eu. Nulla faucibus sed ipsum sed sodales. Curabitur varius iaculis felis, in aliquet sem suscipit quis. Ut vulputate, magna ac bibendum elementum, nulla magna tincidunt urna, a venenatis dolor arcu sed leo.",
+  "contact-title": "Contact us",
+  "contact-desc": "Do you have any questions?",
+  "contact-email": "Enter your email",
+  "articles-title": "Useful articles",
+  "articles-desc": "Discover Architecture",
+  "articles-desc-hover": "Projects for many large domestic and foreign corporations,enterprises in many elds such",
+  "article-link": "Learn more",
+  "client-name": "Paul",
+  "client-name2": "Robert",
+  "client-job": "Owner in",
+  "client-desc": "Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.",
+  "client-desc2": "Founded in 2007, Sparch is specializing in providing innovative services such as website design, brand identity and marketing.",
+  "faqData": [
+    {
+      "question": "The largest and oldest Quotations Page on the Web with about 30 categories",
+      "answer": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci."
+    },
+    {
+      "question": "A huge collection of inspirational quotes, thoughts of greatest minds in history",
+      "answer": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci."
+    },
+    {
+      "question": "Quotations from the great works of literature",
+      "answer": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci."
+    },
+    {
+      "question": "Read quotes and sayings from famous people in history",
+      "answer": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci."
+    },
+    {
+      "question": "Collected quotes from Albert Einstein",
+      "answer": "Sed in sem pellentesque, eleifend erat vitae, tincidunt turpis. Pellentesque augue elit, rutrum sit amet commodo vel, porta quis purus. Nullam faucibus, odio eu bibendum auctor, eros dolor aliquet purus, sit amet pellentesque neque est id tortor. In egestas, erat a dapibus dapibus, mi augue ornare lorem, nec pretium ligula purus nec tellus. Aenean a scelerisque nisi. Nullam pretium fermentum nunc, feugiat placerat urna rutrum eget. Nullam mattis justo consequat risus. Donec imperdiet enim id efficitur pharetra. Nam sollicitudin at est eget auctor. Ut sed ante quis nulla tincidunt auctor. Quisque accumsan pretium tincidunt. Etiam viverra ultrices est vitae suscipit. Pellentesque elementum purus non nisl pharetra consequat. Nunc in venenatis orci."
+    }
+  ]
+}

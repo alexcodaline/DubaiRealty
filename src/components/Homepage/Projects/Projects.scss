@@ -18,7 +18,7 @@
 }
 .projects-links-items {
   display: flex;
-  width: 30%;
+  width: 50%;
   justify-content: space-between;
   .projects-links-item {
     a {
@@ -135,6 +135,8 @@
     display: flex;
     width: 100%;
     padding-bottom: 15px;
+    flex-direction: column;
+    gap: 10px;
     .projects-links-item {
       a {
         text-decoration: none;
@@ -221,7 +223,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0;
+    gap: 20px;
     width: 50%;
     .projects-links-item {
       a {

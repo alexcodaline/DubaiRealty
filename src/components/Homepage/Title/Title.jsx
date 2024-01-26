@@ -3,6 +3,7 @@ import "./Title.scss"
 import titleDecoration from "../../../img/icons/title-decoration.svg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Autoplay } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay'
@@ -15,6 +16,7 @@ export default function Title() {
     const handleSlideChange = (swiper) => {
         setActiveBlock(swiper.realIndex);
     };
+    const { t } = useTranslation();
     return (
         <section className='title'>
             <div className='container'>
@@ -27,11 +29,11 @@ export default function Title() {
                     }}
                     speed={750}
                     slidesPerView={1}
-                   
+
                     autoplay={{ delay: 2500 }}
                     effect={'fade'}
                     navigation={true}
-                    modules={[EffectFade, Navigation,Autoplay]}
+                    modules={[EffectFade, Navigation, Autoplay]}
                     loop={true}
                 >
                     <SwiperSlide>
@@ -41,9 +43,9 @@ export default function Title() {
                                     <img src={titleDecoration} alt="logo" />
                                 </div>
                                 <div className='slide-name'>
-                                    <span>LOREM IPSUM</span>
-                                    <p>Welcome Home <span>To</span> Luxury</p>
-                                    <a href="/">Book a consultation</a>
+                                    <span>{t('slide-title-desc1')}</span>
+                                    <p>{t('slide1-title-name')}<span>{t('slide1-title-name2')}</span>{t('slide1-title-name3')}</p>
+                                    <a href="/">{t('navbar-menu-consultation')}</a>
                                 </div>
                             </div>
                         </div>
@@ -55,9 +57,9 @@ export default function Title() {
                                     <img src={titleDecoration} alt="logo" />
                                 </div>
                                 <div className='slide-name'>
-                                    <span>LOREM IPSUM</span>
-                                    <p>Discover <span>Nighttime</span> Dubai</p>
-                                    <a href="/">Book a consultation</a>
+                                    <span>{t('slide-title-desc1')}</span>
+                                    <p>{t('slide2-title-name')}<span>{t('slide2-title-name2')}</span>{t('slide2-title-name3')}</p>
+                                    <a href="/">{t('navbar-menu-consultation')}</a>
                                 </div>
                             </div>
                         </div>
@@ -69,9 +71,9 @@ export default function Title() {
                                     <img src={titleDecoration} alt="logo" />
                                 </div>
                                 <div className='slide-name'>
-                                    <span>LOREM IPSUM</span>
-                                    <p>Dubai at <span>Twilight</span></p>
-                                    <a href="/">Book a consultation</a>
+                                    <span>{t('slide-title-desc1')}</span>
+                                    <p>{t('slide3-title-name')}<span>{t('slide3-title-name2')}</span>{t('slide3-title-name3')}</p>
+                                    <a href="/">{t('navbar-menu-consultation')}</a>
                                 </div>
                             </div>
                         </div>
@@ -80,15 +82,15 @@ export default function Title() {
                 <div className='description-blocks'>
                     <div className={`description ${activeBlock === 0 ? 'active' : ''}`}>
                         <span className='description-numb'>01</span>
-                        <span className='description-text'>Home Luxury</span>
+                        <span className='description-text'>{t('slide-desc1')}</span>
                     </div>
                     <div className={`description ${activeBlock === 1 ? 'active' : ''}`}>
                         <span className='description-numb'>02</span>
-                        <span className='description-text'>Nighttime Dubai</span>
+                        <span className='description-text'>{t('slide-desc2')}</span>
                     </div>
                     <div className={`description ${activeBlock === 2 ? 'active' : ''}`}>
                         <span className='description-numb'>03</span>
-                        <span className='description-text'>Dubai at Twilight</span>
+                        <span className='description-text'>{t('slide-desc3')}</span>
                     </div>
                 </div>
             </div>

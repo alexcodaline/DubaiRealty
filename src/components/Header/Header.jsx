@@ -2,45 +2,51 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 import logo from "./../../img/icons/header-decoration.svg";
-import { SimpleModal } from "../Homepage/SimpleModal/SimpleModal";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import SimpleModal from "../Homepage/SimpleModal/SimpleModal.jsx";
 import { ReactComponent as IconClose } from './../../img/icons/icon-close.svg'
 import { ReactComponent as IconOpen } from './../../img/icons/open-icon.svg';
-
-import * as Yup from "yup";
-
-const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, "First Name should be at least 4 characters")
-    .matches(/^[a-zA-Z]+$/, "Only letters are allowed")
-    .required("Your name is required"),
-  phone: Yup.string()
-    .matches(/^\+?[0-9]+$/, "Phone must contain only numbers")
-    .min(10, "Your phone number should be at least 10 digits")
-    .max(13, "Your phone number should not exceed 12 digits")
-    .required("Phone Number is required"),
-});
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const [modalInfoisOpen, setModalInfoOpen] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    if (navOpen) {
-      document.body.classList.add('body-no-scroll');
-    } else {
-      document.body.classList.remove('body-no-scroll');
-    }
-    return () => {
-      document.body.classList.remove('body-no-scroll');
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 0);
     };
-  }, [navOpen]);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+useEffect(() => {
+  if (navOpen || modalActive) {
+    document.body.classList.add('body-no-scroll');
+  } else {
+    document.body.classList.remove('body-no-scroll');
+  }
+  return () => {
+    document.body.classList.remove('body-no-scroll');
+  };
+}, [navOpen, modalActive]);
+  const [activeButton, setActiveButton] = useState('');
   const closeNav = () => {
     setNavOpen(false);
   };
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    setActiveButton(lng);
+    i18n.changeLanguage(lng);
+  };
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-row">
           <div className="header-logo">
@@ -67,96 +73,47 @@ export default function Header() {
                 onMouseLeave={() => setMenuVisible(false)}
                 className={`menu ${menuVisible ? "active-menu" : ""}`}
                 onClick={() => setMenuVisible(!menuVisible)}>
-                <span>Buy</span>
+                <span>{t('navbar-menu-buy')}</span>
                 {menuVisible ?
                   <ul>
                     <li onClick={closeNav}>
-                      <Link to="/category">Category number twenty five</Link>
+                      <Link to="/category">{t('navbar-menu-buy-category-all')}</Link>
                     </li>
                     <li onClick={closeNav}>
-                    <Link to="/apartments">Apartments in Dubai</Link>
+                      <Link to="/apartments">{t('navbar-menu-buy-apartments')}</Link>
                     </li>
                     <li onClick={closeNav}>
-                      <a href="/">Category number one</a>
+                      <a href="/">{t('navbar-menu-buy-category-one')}</a>
                     </li>
                   </ul>
                   : null}
               </li>
               <li onClick={closeNav} className={`nav-link ${menuVisible ? "nav-link-shifted" : ""}`}>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog">{t('navbar-menu-blog')}</Link>
               </li>
               <li onClick={closeNav} className={`nav-link2 ${menuVisible ? "nav-link-shifted-2" : ""}`}>
-                <a href="/">About</a>
+                <a href="/">{t('navbar-menu-about')}</a>
               </li>
               <li onClick={closeNav} className={`nav-link3 ${menuVisible ? "nav-link-shifted-3" : ""}`}>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">{t('navbar-menu-contacts')}</Link>
               </li>
             </ul>
             <div className="user-contacts">
               <button
                 className="header-button"
-                onClick={() => setModalInfoOpen(true)}
+                onClick={() => setModalActive(true)}
               >
-                Book a consultation
+                {t('navbar-menu-consultation')}
               </button>
-              <SimpleModal
-                isOpen={modalInfoisOpen}
-                onClose={() => setModalInfoOpen(false)}
-              >
-                <div className="modal-data">
-                  <div className="modal-info">
-                    <span className="modal-title">Leave your contacts</span>
-                    <span className="modal-description">
-                      we will contact you within three hours
-                    </span>
-                  </div>
 
-                  <Formik
-                    initialValues={{
-                      name: "",
-                      phone: "",
-                    }}
-                    validationSchema={validationSchema}
-                  >
-                    {() => (
-                      <Form className="modal-user-form">
-                        <div className="input-container">
-                          <label htmlFor="name">Name</label>
-                          <Field
-                            name="name"
-                            type="text"
-                            className="input-field"
-                            placeholder=""
-                            label="Name"
-                          />
-                          <ErrorMessage
-                            name="name"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-                        <div className="input-container">
-                          <label htmlFor="name">Phone</label>
-                          <Field
-                            name="phone"
-                            type="number"
-                            className="input-field"
-                            placeholder=""
-                          />
-                          <ErrorMessage
-                            name="phone"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-                        <div className="model-submit">
-                          <button type="submit">SEND</button>
-                        </div>
-                      </Form>
-                    )}
-                  </Formik>
-                </div>
-              </SimpleModal>
+              <div className="lang-navbar">
+                <button className={`lang-button ${activeButton === 'en' ? 'active-button-lang' : ''}`}
+                  onClick={() => changeLanguage('en')}
+                >EN</button>
+                <button className={`lang-button ${activeButton === 'ua' ? 'active-button-lang' : ''}`}
+                  onClick={() => changeLanguage('ua')}
+                >UA</button>
+              </div>
               <div className="header-phone">
                 <a href="tel:+380991111111">+3 (099) 111-11-11</a>
               </div>
@@ -164,6 +121,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
+      <SimpleModal active={modalActive} setActive={setModalActive} />
     </header>
   );
 }

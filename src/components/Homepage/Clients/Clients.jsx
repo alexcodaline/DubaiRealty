@@ -1,7 +1,8 @@
 import React from 'react'
-import './Clients.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectCoverflow} from 'swiper/modules';
+import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
+import './Clients.scss'
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay'
@@ -11,6 +12,7 @@ import client2 from "../../../img/clients/client2.webp"
 
 
 export default function Clients() {
+    const { t } = useTranslation();
     return (
         <section className='clients'>
             <div className='container'>
@@ -37,7 +39,7 @@ export default function Clients() {
                         '--swiper-pagination-bottom': '-4px',
                     }}
                     speed={750}
-                    pagination={{ 
+                    pagination={{
                         clickable: true,
                     }}
                     autoplay={{ delay: 4000 }}
@@ -70,9 +72,9 @@ export default function Clients() {
                                         <span className='client-photo-decortion'>”</span>
                                     </div>
                                     <div className='client-block-desc'>
-                                        <span className='client-name'>Paul</span>
-                                        <span className='client-about'>Owner in <span>Paul.com</span></span>
-                                        <p className='client-desc'>Projects for many large domestic and foreign corporations, enterprises in many fields such as finance, banking, F&B, education.</p>
+                                        <span className='client-name'>{t('client-name')}</span>
+                                        <span className='client-about'>{t('client-job')} <span>Paul.com</span></span>
+                                        <p className='client-desc'>{t('client-desc')}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -83,9 +85,9 @@ export default function Clients() {
                                         <span className='client-photo-decortion'>”</span>
                                     </div>
                                     <div className='client-block-desc'>
-                                        <span className='client-name'>Robert</span>
-                                        <span className='client-about'>Founder in <span>Apple inc.</span></span>
-                                        <p className='client-desc'>Founded in 2007, Sparch is specializing in providing innovative services such as website design, brand identity and marketing</p>
+                                    <span className='client-name'>{t('client-name2')}</span>
+                                        <span className='client-about'>{t('client-job')} <span>Apple inc.</span></span>
+                                        <p className='client-desc'>{t('client-desc2')}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>

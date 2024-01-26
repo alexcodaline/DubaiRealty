@@ -1,7 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import './Projects.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, Grid } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import 'swiper/scss';
 import 'swiper/scss/grid';
 import 'swiper/scss/pagination';
@@ -18,26 +19,27 @@ export default function Projects() {
     const toggleHover2 = () => setIsHoveredSlide2(!isHoveredSlide2);
     const toggleHover3 = () => setIsHoveredSlide3(!isHoveredSlide3);
     const toggleHover4 = () => setIsHoveredSlide4(!isHoveredSlide4);
+    const { t } = useTranslation();
 
     return (
         <section className='projects'>
             <div className='container'>
                 <div className='projects-links'>
                     <div className='projects-latest'>
-                        <span>Latest projects</span>
+                        <span>{t('projects-title')}</span>
                     </div>
                     <div className='projects-links-items'>
                         <div className='projects-links-item'>
-                            <a href="/">All</a>
+                            <a href="/">{t('projects-last')}</a>
                         </div>
                         <div className='projects-links-item'>
-                            <a href="/">Building</a>
+                            <a href="/">{t('projects-build')}</a>
                         </div>
                         <div className='projects-links-item'>
-                            <a href="/">Interior</a>
+                            <a href="/">{t('projects-interior')}</a>
                         </div>
                         <div className='projects-links-item'>
-                            <a href="/">All projects</a>
+                            <a href="/">{t('projects-all')}</a>
                         </div>
                     </div>
                 </div>
@@ -85,13 +87,13 @@ export default function Projects() {
                             >
                                 <div className={`vilas ${isHoveredSlide1 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide1 && (
-                                        <div className='slide-name'>Vilas</div>
+                                        <div className='slide-name'>{t('project-vilas')}</div>
                                     )}
                                     {isHoveredSlide1 ? (
                                         <div className="hovered">
-                                            <span className='desc-name'>Vilas</span>
+                                            <span className='desc-name'>{t('project-vilas')}</span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                                            <a href="/">See project</a>
+                                            <a href="/">{t('project-link')}</a>
                                         </div>
                                     ) : null}
                                 </div>
@@ -101,16 +103,16 @@ export default function Projects() {
                                 onMouseEnter={() => setIsHoveredSlide2(true)}
                                 onMouseLeave={() => setIsHoveredSlide2(false)}
                                 onClick={toggleHover2}
-                                >
+                            >
                                 <div className={`houses ${isHoveredSlide2 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide2 && (
-                                        <div className='slide-name'>Houses</div>
+                                        <div className='slide-name'>{t('project-houses')}</div>
                                     )}
                                     {isHoveredSlide2 ? (
                                         <div className="hovered">
-                                            <span className='desc-name'>Houses</span>
+                                            <span className='desc-name'>{t('project-houses')}</span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                                            <a href="/">See project</a>
+                                            <a href="/">{t('project-link')}</a>
                                         </div>
                                     ) : null}
                                 </div>
@@ -120,16 +122,16 @@ export default function Projects() {
                                 onMouseEnter={() => setIsHoveredSlide3(true)}
                                 onMouseLeave={() => setIsHoveredSlide3(false)}
                                 onClick={toggleHover3}
-                                >
+                            >
                                 <div className={`townhouses ${isHoveredSlide3 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide3 && (
-                                        <div className='slide-name'>Townhouses</div>
+                                        <div className='slide-name'>{t('project-town')}</div>
                                     )}
                                     {isHoveredSlide3 ? (
                                         <div className="hovered">
-                                            <span className='desc-name'>Townhouses</span>
+                                            <span className='desc-name'>{t('project-town')}</span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                                            <a href="/">See project</a>
+                                            <a href="/">{t('project-link')}</a>
                                         </div>
                                     ) : null}
                                 </div>
@@ -142,13 +144,13 @@ export default function Projects() {
                             >
                                 <div className={`comers ${isHoveredSlide4 ? 'hovered' : ''}`}>
                                     {!isHoveredSlide4 && (
-                                        <div className='slide-name'>Comercial</div>
+                                        <div className='slide-name'>{t('project-comers')}</div>
                                     )}
                                     {isHoveredSlide4 ? (
                                         <div className="hovered">
-                                            <span className='desc-name'>Comercial</span>
+                                            <span className='desc-name'>{t('project-comers')}</span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
-                                            <a href="/">See project</a>
+                                            <a href="/">{t('project-link')}</a>
                                         </div>
                                     ) : null}
                                 </div>

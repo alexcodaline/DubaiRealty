@@ -5,14 +5,32 @@ import logo from "./../../img/icons/header-decoration.svg";
 import SimpleModal from "../Homepage/SimpleModal/SimpleModal.jsx";
 import { ReactComponent as IconClose } from './../../img/icons/icon-close.svg'
 import { ReactComponent as IconOpen } from './../../img/icons/open-icon.svg';
+import WeatherWidget from '././WeatherWidget/WeatherWidget.jsx'
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const [modalActive, setModalActive] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [weatherVisible, setWeatherVisible] = useState(true); // Додано новий стан
 
+  const [navOpen, setNavOpen] = useState(false);
+  useEffect(() => {
+    if (navOpen || modalActive) {
+      document.body.classList.add('body-no-scroll');
+    } else {
+      document.body.classList.remove('body-no-scroll');
+    }
+    return () => {
+      document.body.classList.remove('body-no-scroll');
+    };
+  }, [navOpen, modalActive]);
+  const [activeButton, setActiveButton] = useState('');
+  const closeNav = () => {
+    setNavOpen(false);
+  };
+
+
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -26,25 +44,14 @@ export default function Header() {
     };
   }, []);
 
-useEffect(() => {
-  if (navOpen || modalActive) {
-    document.body.classList.add('body-no-scroll');
-  } else {
-    document.body.classList.remove('body-no-scroll');
-  }
-  return () => {
-    document.body.classList.remove('body-no-scroll');
-  };
-}, [navOpen, modalActive]);
-  const [activeButton, setActiveButton] = useState('');
-  const closeNav = () => {
-    setNavOpen(false);
-  };
+
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     setActiveButton(lng);
     i18n.changeLanguage(lng);
   };
+
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
@@ -98,6 +105,10 @@ useEffect(() => {
                 <Link to="/contact">{t('navbar-menu-contacts')}</Link>
               </li>
             </ul>
+
+              <div className='weather'>
+              {weatherVisible && <WeatherWidget />}
+              </div>
             <div className="user-contacts">
               <button
                 className="header-button"

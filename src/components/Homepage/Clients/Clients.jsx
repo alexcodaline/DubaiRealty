@@ -29,14 +29,14 @@ export default function Clients() {
                         stretch: -100,
                         depth: 150,
                         modifier: 1,
-                        slideShadows: true,
+                        slideShadows: false,
                         updateSize: 20,
                     }}
                     spaceBetween={1}
                     style={{
                         '--swiper-navigation-color': '#fcd54c',
                         '--swiper-pagination-color': '#fcd54c',
-                        '--swiper-pagination-bottom': '-4px',
+                        '--swiper-pagination-bottom': '0px',
                     }}
                     speed={750}
                     pagination={{

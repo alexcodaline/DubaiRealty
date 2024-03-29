@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 export default function Header() {
   const [modalActive, setModalActive] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  // eslint-disable-next-line
   const [weatherVisible, setWeatherVisible] = useState(true);
 
   const [navOpen, setNavOpen] = useState(false);
